@@ -17,7 +17,12 @@ body, html, .wrap {
     height: 100%;
     background: #eee;
 }
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
 .wrap .tab{
+    flex-shrink: 0;
     width: 100%;
     height: .5rem;
     padding: 0 10%;
@@ -36,4 +41,91 @@ body, html, .wrap {
 .active {
     color: lightblue;
     border-bottom: 1px solid lightblue;
+}
+.cont {
+    width: 100%;
+    flex:1;
+    margin-top: 10px;
+    padding: 2% 2%;
+    background: #fff;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.box {
+    width: 100%;
+    height: 1.1rem;
+    background: url(img/bg1.jpg) no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 10px;
+}
+.box:nth-child(2) {
+    background: url(img/bg2.jpg) no-repeat;  
+    background-size: 100% 100%;
+}
+.box:nth-child(3) {
+    background: url(img/bg3.jpg) no-repeat;  
+    background-size: 100% 100%;
+}
+.box p {
+    width: 100%;
+    height: .66rem;
+    color: #fff;
+    position: relative;
+}
+.box p span {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: .21rem;
+    height: .24rem;
+    background: url(img/a.png) no-repeat;
+    background-size: 100% 100%;
+}
+.box p b {
+    padding-left: .4rem;
+    font-size: .55rem;
+    line-height: .66rem;
+    font-weight: bold;
+}
+.box p i {
+    font-style: normal;
+    position: absolute;
+    right: .2rem;
+    bottom: .1rem;
+    font-size: .24rem;
+}
+.box .mon {
+    width: 100%;
+    height: auto;
+}
+.box .mon li {
+    position: relative;
+}
+.box .mon li em {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.box .mon li .top {
+    width: .23rem;
+    height: .2rem;
+    top:-5px;
+    background: url(img/b.png) 0 9px no-repeat;
+    background-size: 100% 100%;
+    color: #1CB275;
+}
+.box .mon li .bottom {
+    width: .23rem;
+    height: .26rem;
+    background: url(img/b.png) 1px -10px no-repeat;
+    background-size: 100% 100%;
+    color: #A9A9A9;
+}
+.box .mon li a {
+    font-size: .12rem;
+    padding-left: .3rem;
+    color: #1CB275;
+}
+.box .mon li:last-child a{
+    color: #A9A9A9;
 }

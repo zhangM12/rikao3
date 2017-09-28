@@ -15,12 +15,68 @@
             <li>已使用</li>
             <li>已过期</li>
         </ul>
+        <div class="cont">
+            <div class="box">
+                <p><span></span><b>5</b><i>满减劵</i></p>
+                <ul class="mon">
+                    <li>
+                        <em class="top"></em>
+                        <a href="#">使用门栏：1.满100元即可使用2.本劵适用于所有项目</a>
+                    </li>
+                    <li>
+                        <em class="bottom"></em>
+                        <a href="#">使用时间：即日起至2016年11月10日</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box">
+                <p><span></span><b>5</b><i>满减劵</i></p>
+                <ul class="mon">
+                    <li>
+                        <em class="top"></em>
+                        <a href="#">使用门栏：1.满100元即可使用2.本劵适用于所有项目</a>
+                    </li>
+                    <li>
+                        <em class="bottom"></em>
+                        <a href="#">使用时间：即日起至2016年11月10日</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box">
+                <p><span></span><b>5</b><i>满减劵</i></p>
+                <ul class="mon">
+                    <li>
+                        <em class="top"></em>
+                        <a href="#">使用门栏：1.满100元即可使用2.本劵适用于所有项目</a>
+                    </li>
+                    <li>
+                        <em class="bottom"></em>
+                        <a href="#">使用时间：即日起至2016年11月10日</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box">
+                <p><span></span><b>5</b><i>满减劵</i></p>
+                <ul class="mon">
+                    <li>
+                        <em class="top"></em>
+                        <a href="#">使用门栏：1.满100元即可使用2.本劵适用于所有项目</a>
+                    </li>
+                    <li>
+                        <em class="bottom"></em>
+                        <a href="#">使用时间：即日起至2016年11月10日</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
+<script src="dev/data.js"></script>
 <script>
     var html = document.documentElement;
     html.style.fontSize = html.clientWidth / 375 * 100 + 'px';
     var lis = document.getElementsByClassName('tab')[0].getElementsByTagName('li');
+    var cont = document.getElementsByClassName('cont')[0];
     for (let i = 0; i < lis.length; i++) {
         lis[i].onclick = function () {
             for (let k = 0; k < lis.length; k++) {
@@ -29,5 +85,22 @@
             this.className = 'active';
         }
     }
+    // console.log(data)
+    var str =  '';
+    data.forEach(function (val, k) {
+        str += `<p><span></span><b>${val.b}</b><i>${val.i}</i></p>
+                <ul class="mon">
+                    <li>
+                        <em class="top"></em>
+                        <a href="#">${val.top}</a>
+                    </li>
+                    <li>
+                        <em class="bottom"></em>
+                        <a href="#">${val.bottom}</a>
+                    </li>
+                </ul>`
+        // console.log(str);
+    })
+    // cont.innerHTML = str;
 </script>
 </html>
