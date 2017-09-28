@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telphone=no, email=no，address=no" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <ul class="tab">
+            <li class="active">未使用</li>
+            <li>已使用</li>
+            <li>已过期</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var html = document.documentElement;
+    html.style.fontSize = html.clientWidth / 375 * 100 + 'px';
+    var lis = document.getElementsByClassName('tab')[0].getElementsByTagName('li');
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].onclick = function () {
+            for (let k = 0; k < lis.length; k++) {
+                lis[k].className = '';
+            }
+            this.className = 'active';
+        }
+    }
+</script>
+</html>
